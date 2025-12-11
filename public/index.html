@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الطبيب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>لوحة إدارة المرضى</h1>
+
+        <!-- Patient Form -->
+        <form id="patientForm">
+            <input type="hidden" id="patientId">
+
+            <label>اسم المريض</label>
+            <input type="text" id="name" required>
+
+            <label>العمر</label>
+            <input type="number" id="age" required>
+
+            <label>رسوم الاستشارة (شيكل)</label>
+            <input type="number" id="fee" required>
+
+            <label>موعد المراجعة القادم</label>
+            <input type="date" id="next_appointment">
+
+            <label>الوصف الطبي للحالة</label>
+            <textarea id="condition" rows="4"></textarea>
+
+            <label>الأدوية الموصوفة</label>
+            <textarea id="medications" rows="3"></textarea>
+
+            <button type="submit" class="add-btn">حفظ بيانات المريض</button>
+        </form>
+
+        <hr style="margin: 30px 0;">
+
+        <h2 style="text-align:center; margin-bottom:15px;">قائمة المرضى</h2>
+
+        <div id="patientsList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
